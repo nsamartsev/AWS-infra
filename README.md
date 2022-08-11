@@ -1,7 +1,10 @@
-# Personal AWS Infra
+# Personal Simple AWS Infra
 
-Build by Terraform, Bash
+Build by Terraform
 
-Components:
-- EC2
+Components used:
+- EC2 Instance
+- Storage
+- IAM 
+- EIP
 - Security Group
