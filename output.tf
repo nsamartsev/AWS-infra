@@ -22,3 +22,7 @@ output "data_aws_caller_identity" {
 output "data_aws_region" {
   value = [data.aws_region.current_region.name, data.aws_region.current_region.description]
 }
+
+output "data_aws_region_current_name" {
+  value = data.aws_region.current_region.name
+}
