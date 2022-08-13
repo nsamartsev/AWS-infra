@@ -5,7 +5,7 @@ resource "aws_instance" "my_webserver" {
   vpc_security_group_ids = [var.security_group]
   iam_instance_profile   = var.instance_profile
 
-  user_data = templatefile("./utils/user_data.sh.tpl", {
+  user_data = templatefile("./../utils/user_data.sh.tpl", {
     f_name = "Nikita",
     l_name = "Samartsev",
     names  = ["Vasya", "Petya"]
@@ -27,7 +27,7 @@ resource "aws_eip" "public_ip" {
 
 resource "aws_ebs_volume" "storage" {
   availability_zone = aws_instance.my_webserver.availability_zone
-  size              = "60"
+  size              = "50"
   type              = "gp2"
 }
 
