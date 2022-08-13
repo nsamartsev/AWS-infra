@@ -16,7 +16,9 @@ resource "aws_instance" "my_webserver" {
     Owner = "Nikita Samartsev"
   }
 
-  depends_on = [var.security_group]
+  depends_on = [
+    var.security_group
+  ]
 }
 
 resource "aws_eip" "public_ip" {
