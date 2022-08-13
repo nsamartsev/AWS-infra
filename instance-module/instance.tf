@@ -5,7 +5,7 @@ resource "aws_instance" "my_webserver" {
   vpc_security_group_ids = [var.security_group]
   iam_instance_profile   = var.instance_profile
 
-  user_data = templatefile("./utils/user_data.sh.tpl", {
+  user_data = templatefile("./../utils/user_data.sh.tpl", {
     f_name = "Nikita",
     l_name = "Samartsev",
     names  = ["Vasya", "Petya"]
