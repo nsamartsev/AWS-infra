@@ -15,6 +15,7 @@ on:
 jobs:
   terraform:
     name: "Terraform"
+    runs-on: ubuntu-latest
     env:
       working-directory: instance-module
     defaults:
