@@ -12,7 +12,7 @@ resource "aws_instance" "my_webserver" {
   })
 
   tags = {
-    Name  = "My Web Server"
+    Name  = "My Web Server 3"
     Owner = "Nikita Samartsev"
   }
 
@@ -27,7 +27,7 @@ resource "aws_eip" "public_ip" {
 
 resource "aws_ebs_volume" "storage" {
   availability_zone = aws_instance.my_webserver.availability_zone
-  size              = "50"
+  size              = "60"
   type              = "gp2"
 }
 
