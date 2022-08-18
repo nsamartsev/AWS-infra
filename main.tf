@@ -10,10 +10,19 @@ terraform {
 
 provider "aws" {
   shared_credentials_files = ["~/.aws/credentials"]
-  region = var.region
+  region                   = var.region
 }
 
 data "aws_availability_zones" "working" {
+}
+
+data "aws_ami" "amazon_linux_latest" {
+  owners      = ["amazon"]
+  most_recent = true
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-kernel-*-x86_64-gp2"]
+  }
 }
 
 data "aws_caller_identity" "current" {

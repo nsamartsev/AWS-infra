@@ -1,5 +1,5 @@
 locals {
-  mylen = length(data.aws_availability_zones.working.names)
+  zones_len = length(data.aws_availability_zones.working.names)
 }
 
 output "data_aws_availability_zone_names" {
@@ -8,7 +8,7 @@ output "data_aws_availability_zone_names" {
 
 # output last element using local variables
 output "data_aws_availability_zone_names_last" {
-  value = data.aws_availability_zones.working.names[local.mylen - 1]
+  value = data.aws_availability_zones.working.names[local.zones_len - 1]
 }
 
 output "data_aws_availability_zones_zone_ids" {
