@@ -2,7 +2,7 @@
 
 Build by Terraform
 
-Components used:
+Provision:
 - EC2 Instance
 - Storage
 - IAM 
