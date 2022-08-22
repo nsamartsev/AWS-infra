@@ -1,7 +1,7 @@
 resource "aws_launch_configuration" "web" {
   name_prefix     = "WebServer-Highly-Available-LC-"
   image_id        = data.aws_ami.amazon_linux_latest.id
-  instance_type   = "t3.micro"
+  instance_type   = var.instance_type
   security_groups = [aws_security_group.webserver_security_group.id]
   user_data = templatefile("./utils/user_data.sh.tpl", {
     f_name = "Nikita",
