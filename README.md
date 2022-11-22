@@ -1,6 +1,4 @@
-# Personal Simple AWS Infra
-
-Build by Terraform
+# Personal AWS Infrastructure deployed by Pipeline 
 
 Provision:
 - EC2 Instance
